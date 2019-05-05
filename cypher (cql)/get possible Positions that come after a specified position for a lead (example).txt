@@ -1,0 +1,5 @@
+
+Return possibles Positions that come after a specified position for a lead
+---------------------------------------------------------------------------------
+match (pA:Position{name:'Swing Open Hug'})-[r:CAN_PRECEDE]->(pB:Position)
+return pA.name,pB.name,r.how,pA.def,pB.def
