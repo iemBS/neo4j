@@ -1,0 +1,3 @@
+Create a Position node
+---------------------------
+create (p:Position{name:'Swing Open Hug',xzPos:'Lead in front of follow',xzDistance:'closed',yPos:'regular height',facing:'Lead and follow face each other',connection:'Lead RH on follow back, Lead LH hold follow RH, Follow LH on lead right shoulder',xStagger:'yes'})
