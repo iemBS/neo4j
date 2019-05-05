@@ -1,0 +1,3 @@
+Create a Move node
+-----------------------
+CREATE (n:Move { name: 'Swingout', count: 8, mnemonic:'Not Applicable'})
