@@ -1,0 +1,3 @@
+update properties in relationship
+--------------------------------------
+START a=node(*) MATCH (a)-[r:CONTAINS{order:1}]->(b) SET r.xzPos = 'Lead left of follow',r.xzDistance = 'close', r.yPos = 'regular height', r.facing = '45 angle', r.connection = 'Lead RH on follow back, Lead LH hold follow RH', r.xStagger = 'not applicable'
