@@ -1,0 +1,3 @@
+Return a specific Move node and all its associated Step nodes for only the CONTAINS relationship type
+----------------------------------------------------------------------------------------------------------
+start m=node(Move{name:'Basic'}) match (m)-[CONTAINS]->(s) return s,m
