@@ -1,0 +1,5 @@
+Return follow steps for a move in order
+------------------------------------------
+match (m:Move{name:'Basic'})-[r:CONTAINS_4_FOLLOW]->(s:Step) 
+return m.name,r.order,s.count,s.name,s.def,r.xzPos,r.xzDistance,r.yPos,r.facing,r.connection,r.xStagger
+order by r.order
