@@ -1,0 +1,5 @@
+Return a specific Move and the Positions a lead uses in it
+-----------------------------------------------------------
+match(m:Move{name:'Basic'})-[r:USES]->(p.Position)
+return m.name,r.order,p.name,r.how
+order by r.order
