@@ -1,0 +1,4 @@
+Return example URL and time for a move
+---------------------------------------
+match (m:Move{name:'Basic'})-[r:IS_IN]->(e:Example) 
+return m.name,r.time,e.url
