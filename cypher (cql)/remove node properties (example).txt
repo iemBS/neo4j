@@ -1,0 +1,3 @@
+Remove a property in a node
+-----------------------------
+match(n{name:'LRSB'}) remove n.xzPos, n.xzDistance, n.yPos, n.facing, n.connection, n.xStagger
