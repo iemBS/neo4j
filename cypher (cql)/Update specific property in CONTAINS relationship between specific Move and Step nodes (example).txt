@@ -1,0 +1,3 @@
+Update specific property in CONTAINS relationship between a specific Move and Step nodes
+---------------------------------------------------------------------------------------------
+MATCH (m:Move{name:'Swingout'})-[rel:CONTAINS{order:3}]->(s:Step{name:'RSB'}) SET rel.order = 5
