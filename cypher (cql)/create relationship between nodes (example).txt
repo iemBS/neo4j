@@ -1,0 +1,5 @@
+Create a relationship between nodes
+-----------------------------------
+MATCH(a:Move),(b:Step{name:'LTSP'}) CREATE (a)-[r:CONTAINS{order:'3,4'}]->(b) RETURN r
+
+MATCH(a:Move),(b:Example) CREATE (a)-[r:IS_IN{time:15}]->(b) RETURN r
