@@ -1,0 +1,3 @@
+Create a step node
+-----------------------
+CREATE (n:Step { name: 'RSP', count: 1, facing:'same direction', xzDistance:'close', xzPos:'parallel',yPos:'regular height',zStagger:'not applicable',connection:'Lead right palm on follow back,follow left palm on lead right shoulder' })
