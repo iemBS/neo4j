@@ -1,0 +1,3 @@
+Update properties in a node
+---------------------------------
+match(n:Step{name:'RRSB'}) set n.def = 'Rock the right foot back, but do not put weight on it'
