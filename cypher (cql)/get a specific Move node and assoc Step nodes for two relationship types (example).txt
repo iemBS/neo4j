@@ -1,0 +1,3 @@
+Return a specific Move node and all its associated Step nodes for both the CONTAINS and CONTAINS_4_FOLLOW relationship type
+-----------------------------------------------------------------------------------------------------------------------------
+match(s:Step),(m:Move{name:'Basic'}) return s,m
