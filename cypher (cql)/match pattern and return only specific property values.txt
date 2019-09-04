@@ -1,0 +1,2 @@
+MATCH (actors:Actor)-[:REGENERATED_TO]->(others) 
+RETURN actors.name, others.name
