@@ -1,0 +1,4 @@
+Notes:
+  -this case assumes relation type is “PLAYED”
+Main Success Scenario:
+  1.()–[:PLAYED]->()
