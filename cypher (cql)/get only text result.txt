@@ -1,0 +1,4 @@
+Main Success Scenario
+  1. Xxx: fill in
+Alternatives:
+  1a. Return only node/relation property
