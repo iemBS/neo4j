@@ -1,0 +1,2 @@
+Main Success Scenario:
+  1. (:Actor)–[:PLAYED]->(:Character)
