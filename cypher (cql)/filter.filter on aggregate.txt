@@ -1,0 +1,10 @@
+Filter on Aggregate
+Notes:
+  -Assume "n" and "friend" type notes are connected via a "FRIEND" relationship and that the "n" node has a "name" property.
+Main Success Scenario:
+  1. See example code below
+  
+MATCH (n {name: 'John'})-[:FRIEND]-(friend)
+WITH n, count(friend) AS friendsCount
+WHERE friendsCount > 3
+RETURN n, friendsCount
