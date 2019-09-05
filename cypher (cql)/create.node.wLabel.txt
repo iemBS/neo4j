@@ -1,4 +1,4 @@
-Create Node Type
+Create Node with Label
 Notes:
   -"Type" also means "Label"
   -Assuing the type is "Person" here
