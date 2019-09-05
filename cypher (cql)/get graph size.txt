@@ -1,0 +1,3 @@
+Get Graph Size
+Main Success Scenario:
+  1. # of nodes in a graph
