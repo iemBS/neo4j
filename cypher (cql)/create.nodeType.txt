@@ -1,1 +1,6 @@
-xxx:fill in
+Create Node Type
+Notes:
+  -"Type" also means "Label"
+  -Assuing the type is "Person" here
+Main Success Scenario:
+  1. CREATE (n:Person)
