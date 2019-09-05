@@ -1,6 +1,9 @@
 Create Node with Label
 Notes:
   -"Type" also means "Label"
-  -Assuing the type is "Person" here
+  -Assuming "Person" and "Swedish" are labels
 Main Success Scenario:
   1. CREATE (n:Person)
+Alternatives:
+  1a. Create node with more than one label
+    1a1. CREATE (n:Person:Swedish)
