@@ -1,8 +1,19 @@
 Limit number of records returned
+Notes:
+  -Using a static value with LIMIT works just like the TOP in SQL
+  -Dynamic limits use an expression
+  -Dynamic limits cannot use external variables
 Main Success Scenario:
-  1. Query below will return only the first two records
+  1. Return a set number of records. In this example, it is 2. 
   
       MATCH (n)
       RETURN n.name
       ORDER BY n.name
       LIMIT 2
+Alternatives:
+  1a. Use a dynamic LIMIT
+  
+      MATCH (n)
+      RETURN n.name
+      ORDER BY n.name
+      LIMIT toInteger(3 * rand())+ 1
