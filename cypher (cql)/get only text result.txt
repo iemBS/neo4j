@@ -1,4 +1,13 @@
+Get text Result
+Notes:
+  -Guidance @ https://neo4j.com/developer/aggregation-returns-functions/
+  -"RETURN" clause is determines what is returned
 Main Success Scenario
-  1. Xxx: fill in
+  1. Neo4j browser is seto to only return text
 Alternatives:
   1a. Return only node/relation property
+    1a1. xxx: need to fill in
+  1b. Return aggregated value
+    1b1. xxx: need to fill in
+
+
