@@ -1,0 +1,8 @@
+Limit number of records returned
+Main Success Scenario:
+  1. Query below will return only the first two records
+  
+      MATCH (n)
+      RETURN n.name
+      ORDER BY n.name
+      LIMIT 2
