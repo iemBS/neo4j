@@ -1,0 +1,8 @@
+Skip Records in Result
+Main Success Scenario:
+  1. The below query will skip the first 3 records returned and return from record #4 to the end of the records
+  
+    MATCH (n)
+    RETURN n.name
+    ORDER BY n.name
+    SKIP 3
