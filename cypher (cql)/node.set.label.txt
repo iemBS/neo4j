@@ -1,0 +1,16 @@
+Set Node Label
+Notes:
+  -Assume node has a "name" property and label of "German"
+  -This will overwrite one or more labels of the node if they already exist
+  -Guidance @ https://neo4j.com/docs/cypher-manual/current/clauses/set/
+Main Success Scenario:
+  1. 
+      MATCH (n { name: 'Stefan' })
+      SET n:German
+      RETURN n.name, labels(n) AS labels
+Alternatives:
+  1a. Set more than one label for the node
+    1a1. 
+      MATCH (n { name: 'Stefan' })
+      SET n:German:Swedish
+      RETURN n.name, labels(n) AS labels
