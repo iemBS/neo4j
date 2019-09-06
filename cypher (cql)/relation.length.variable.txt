@@ -1,6 +1,17 @@
 Filter on variable length relationship
+Notes:
+  -Using variable-length paths that have the lower bound zero means that two variables can point to
+the same node. If the path length between two nodes is zero, they are by definition the same node.
+Note that when matching zero-length paths the result may contain a match even when matching on
+a relationship type not in use.
 Main Success Scenario
   1. Code below returns all movies related to "Charlie Sheen" by 1 to 3 hops
   
-MATCH (martin {name: 'Charlie Sheen'})-[:ACTED_IN*1..3]-(movie:Movie)
-RETURN movie.title
+    MATCH (martin {name: 'Charlie Sheen'})-[:ACTED_IN*1..3]-(movie:Movie)
+    RETURN movie.title
+  1a. Use a variable 
+    MATCH p = (actor {name: 'Charlie Sheen'})-[:ACTED_IN*2]-(co_actor)
+    RETURN relationships(p)
+  1b. Use a variable length where the lower bound is 0
+    MATCH (wallstreet:Movie {title: 'Wall Street'})-[*0..1]-(x)
+    RETURN x
