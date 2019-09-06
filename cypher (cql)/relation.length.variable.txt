@@ -1,0 +1,6 @@
+Filter on variable length relationship
+Main Success Scenario
+  1. Code below returns all movies related to "Charlie Sheen" by 1 to 3 hops
+  
+MATCH (martin {name: 'Charlie Sheen'})-[:ACTED_IN*1..3]-(movie:Movie)
+RETURN movie.title
