@@ -1,0 +1,73 @@
+Use Parameters
+Notes:
+  -Cannot use structural types (node label/type,relationship type, path, property name/key) as paramaeters
+  -Parameters can be used for literals, expressions, node ID, relationship ID, explicit index, index values, & queries
+  -Parameters may consist of letters and numbers, but cannot start with a number or currency symbol.
+Main Success Scenario:
+  1. See code below with a string literal parameter
+      {
+      "name" : "Johan"
+      }
+      MATCH (n:Person)
+      WHERE n.name = $name
+      RETURN n
+Alternatives:
+  1a. SAme query but different syntax
+    1a1. 
+      MATCH (n:Person {name: $name})
+      RETURN n
+  1b. Case-sensitive string pattern matching
+    1b1.
+    {
+    "name" : "Michael"
+    }
+    MATCH (n:Person)
+    WHERE n.name STARTS WITH $name
+    RETURN n.name
+  1c. Create node
+    1c1.
+      {
+      "props" : {
+      "name" : "Andres",
+      "position" : "Developer"
+      }
+      }
+      CREATE ($props)
+  1d. Create multiple nodes with properties
+    1d1. 
+      {
+      "props" : [ {
+      "awesome" : true,
+      "name" : "Andres",
+      "position" : "Developer"
+      }, {
+      "children" : 3,
+      "name" : "Michael",
+      "position" : "Developer"
+      } ]
+      }
+      UNWIND $props AS properties
+      CREATE (n:Person)
+      SET n = properties
+      RETURN n
+  1e. Setting all properties on a node
+    1e1. 
+      {
+      "props" : {
+      "name" : "Andres",
+      "position" : "Developer"
+      }
+      }
+      MATCH (n:Person)
+      WHERE n.name='Michaela'
+      SET n = $props
+  1f. Skip and limit
+    1f1. 
+      {
+      "s" : 1,
+      "l" : 1
+      }
+      MATCH (n:Person)
+      RETURN n.name
+      SKIP $s
+      LIMIT $l
