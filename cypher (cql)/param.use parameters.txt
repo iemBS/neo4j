@@ -4,6 +4,7 @@ Notes:
   -Parameters can be used for literals, expressions, node ID, relationship ID, explicit index, index values, & queries
   -Parameters may consist of letters and numbers, but cannot start with a number or currency symbol.
   -"UNWIND" transforms a list back into individual records
+  -Most functions in Cypher will return null if an input parameter is null.
 Main Success Scenario:
   1. See code below with a string literal parameter
       {
@@ -72,3 +73,35 @@ Alternatives:
       RETURN n.name
       SKIP $s
       LIMIT $l
+  1g. Set property value
+    1g1. 
+      {
+      "surname" : "Taylor"
+      }
+      MATCH (n {name: 'Andres'})
+      SET n.surname = $surname
+      RETURN n
+  1h. Use map parameters with MERGE
+    1h1. 
+      {
+      "param" : {
+      "name" : "Keanu Reeves",
+      "role" : "Neo"
+      }
+      }
+      MERGE (person:Person {name: $param.name, role: $param.role})
+      RETURN person.name, person.role
+  1i. Call a procedure with parameter arguments
+    1i1. 
+        {
+        "indexName" : "users",
+        "node" : 0,
+        "propKey" : "name"
+        }
+        CALL org.opencypher.procedure.example.addNodeToIndex
+  1j. Call a procedure with mixed literal and parameter arguments
+    1j1. 
+      {
+      "node" : 0
+      }
+      CALL org.opencypher.procedure.example.addNodeToIndex('users', $node, 'name')
