@@ -3,6 +3,7 @@ Notes:
   -Cannot use structural types (node label/type,relationship type, path, property name/key) as paramaeters
   -Parameters can be used for literals, expressions, node ID, relationship ID, explicit index, index values, & queries
   -Parameters may consist of letters and numbers, but cannot start with a number or currency symbol.
+  -"UNWIND" transforms a list back into individual records
 Main Success Scenario:
   1. See code below with a string literal parameter
       {
